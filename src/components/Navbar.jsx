@@ -6,7 +6,7 @@ const Navbar = (props) => {
     <>
       <nav
         className={`navbar navbar-expand-lg bg-${props.mode} navbar-${props.mode}`}
-        style={{backgroundColor: props.mode}}
+        style={{ backgroundColor: props.mode }}
       >
         <div className="container-fluid">
           <a
@@ -39,16 +39,6 @@ const Navbar = (props) => {
                   to="/"
                 >
                   Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className={`nav-link active text-${
-                    props.mode === "light" ? "dark" : "light"
-                  }`}
-                  to="/about"
-                >
-                  About Us
                 </Link>
               </li>
             </ul>

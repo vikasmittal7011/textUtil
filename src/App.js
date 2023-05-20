@@ -1,6 +1,5 @@
 import Navbar from "./components/Navbar";
 import TextFrom from "./components/TextForm";
-import About from "./components/About";
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -97,7 +96,6 @@ function App() {
             />
           }
         />
-        <Route path="/about" element={<About color={color} mode={mode} />} />
       </Routes>
     </BrowserRouter>
   );

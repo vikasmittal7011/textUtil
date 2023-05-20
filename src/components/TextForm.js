@@ -94,6 +94,7 @@ const TextFrom = (props) => {
             value={text}
             id="text"
             rows="6"
+            placeholder="Write text here..."
           ></textarea>
         </div>
         <button
