@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
+  const refBTN = useRef(null);
+
+  const setRef = () => {
+    if (window.innerWidth < 699) {
+      refBTN.current.click();
+    }
+  };
+
   return (
     <>
       <nav
@@ -18,6 +26,7 @@ const Navbar = (props) => {
             TextUtil
           </a>
           <button
+            ref={refBTN}
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -37,6 +46,7 @@ const Navbar = (props) => {
                   }`}
                   aria-current="page"
                   to="/"
+                  onClick={setRef}
                 >
                   Home
                 </Link>
